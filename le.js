@@ -24,7 +24,7 @@ function initSlider(size) {
         console.log(count = 0);
     }
     function set (n) {
-        if (n < 0 && n > size) {
+        if (n < 0 || n > size) {
             console.log('Error')
         }
         else {
@@ -47,18 +47,3 @@ slider.down();
 slider.down();
 slider.foo();
 slider.set(7);
-
-  
-/*
-Уточнение по Дз - 7:
-InitSlider - возвращает 3 ф-ии (up, down, set) которые будут делать работу по изменению счетчика
-Пример : 
-
-var slider = InitSlider(10)
-
-slider.up()//1
-slider.up()//2
-slider.down()//1
-
-slider.set(11)// ошибка надо  <= 10
-  */
