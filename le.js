@@ -3,7 +3,7 @@ function initSlider(size) {
     function up () {
         ++count;
         if (size == count) {
-            count = 0    
+            reset()  
         } 
         else if (count == 0) {
             count = size
@@ -13,15 +13,15 @@ function initSlider(size) {
     function down () {
         --count;
         if (size == count) {
-            count = 0   
+            reset() 
         }  
         else if (count == 0) {
             count = size
         }
         console.log(count);
     }
-    function foo () {
-        console.log(count = 0);
+    function reset () {
+        console.log (count = 0);
     }
     function set (n) {
         if (n < 0 || n > size) {
@@ -35,15 +35,17 @@ function initSlider(size) {
     return {
         up: up,
         down: down, 
-        foo: foo,
-        set: set,      
+        set: set,     
     }
 }
-var slider = initSlider(3);
+var slider = initSlider(5);
+slider.up();
+slider.up();
+slider.up();
+slider.up();
 slider.up();
 slider.up();
 slider.down();
 slider.down();
 slider.down();
-slider.foo();
 slider.set(7);
